@@ -5,6 +5,8 @@ export const sportEvent = { //enum
   HIT: 'hit'
 };
 
+export const stub = () => 42;
+
 export default function consequence({setBalls, setStrikes}) {
   const curried = () => {
     setBalls(42);
