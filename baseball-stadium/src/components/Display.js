@@ -1,7 +1,10 @@
 import React from 'react';
 
-export default props => {
+export default ({ balls, strikes }) => {
   return (
-    <div><p>display</p></div>
+    <div>
+      <p>BALLS: {balls}</p>
+      <p>STRIKES: {strikes}</p>
+    </div>
   );
 };
