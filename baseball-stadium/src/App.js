@@ -12,7 +12,11 @@ function App() {
 
   return (
     <div className="App">
-      <Dashboard update={consequence({setBalls, setStrikes})} />
+      <Dashboard
+        balls={balls}
+        strikes={strikes}
+        update={consequence({setBalls, setStrikes})}
+      />
       <Display balls={balls} strikes={strikes} />
     </div>
   );

@@ -1,7 +1,7 @@
-import * as s from './sportsball';
+import consequence, { sportEvent } from './sportsball';
 
 describe('sportsball', () => {
-  it('works at all', () => {
-    expect(s.stub()).toBe(42); // .toBe() looks for strict equality!
+  it('increments strikes', () => {
+    expect(consequence(sportEvent.STRIKE)(2, 3)).toBe(42);
   });
 }); 

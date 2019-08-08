@@ -5,12 +5,19 @@ export const sportEvent = { //enum
   HIT: 'hit'
 };
 
-export const stub = () => 42;
-
 export default function consequence({setBalls, setStrikes}) {
-  const curried = () => {
-    setBalls(42);
-    console.log('called consequence')
+  const strike = (balls, strikes) => {
+    const newStrikes = strikes + 1;
+    if (newStrikes >= 3) {
+      setBalls(0);
+      setStrikes(0);
+    } else {
+      setStrikes(newStrikes);
+    }
   };
-  return curried;
+  return ev => {
+    return {
+      [sportEvent.STRIKE]: strike
+    }[ev];
+  };
 };
