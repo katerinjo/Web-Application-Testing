@@ -1,7 +1,12 @@
 import React from 'react';
 
-export default props => {
+export default ({ callback }) => {
   return (
-    <div><p>dashboard</p></div>
+    <div>
+      <button onClick={callback}>strike</button>
+      <button onClick={callback}>ball</button>
+      <button onClick={callback}>foul</button>
+      <button onClick={callback}>hit</button>
+    </div>
   );
 };
