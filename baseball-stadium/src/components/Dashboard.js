@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default ({ callback }) => {
+export default ({ update }) => {
   return (
     <div>
-      <button onClick={callback}>strike</button>
-      <button onClick={callback}>ball</button>
-      <button onClick={callback}>foul</button>
-      <button onClick={callback}>hit</button>
+      <button onClick={update}>strike</button>
+      <button onClick={update}>ball</button>
+      <button onClick={update}>foul</button>
+      <button onClick={update}>hit</button>
     </div>
   );
 };

@@ -6,5 +6,9 @@ export const sportEvent = { //enum
 };
 
 export default function consequence({setBalls, setStrikes}) {
-  return () => setBalls(42);
+  const curried = () => {
+    setBalls(42);
+    console.log('called consequence')
+  };
+  return curried;
 };
